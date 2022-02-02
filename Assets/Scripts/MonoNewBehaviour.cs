@@ -11,11 +11,14 @@ public class MonoNewBehaviour : MonoBehaviour
     private Warrior war;
     public Arrays arrays;
 
+    private Rigidbody myBody;
+
     private GameObject warrior;
     void Start()
     {
         war = GameObject.Find("Player").GetComponent<Warrior>();
         warrior = GameObject.Find("Player").GetComponent<GameObject>();
+        myBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
