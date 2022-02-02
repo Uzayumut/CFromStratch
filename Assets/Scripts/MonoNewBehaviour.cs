@@ -9,9 +9,13 @@ public class MonoNewBehaviour : MonoBehaviour
     [HideInInspector]//The ınspector screen not visible
     public int health;
     private Warrior war;
+    public Arrays arrays;
+
+    private GameObject warrior;
     void Start()
     {
         war = GameObject.Find("Player").GetComponent<Warrior>();
+        warrior = GameObject.Find("Player").GetComponent<GameObject>();
     }
 
     // Update is called once per frame
