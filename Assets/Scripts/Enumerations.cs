@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class Enumerations : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public enum PlayerState
+    {
+        PlayerDied,
+        PlayerWon,
+        Prepare,
+        Start
+    }
+    PlayerState pState = PlayerState.Prepare;
     void Start()
     {
-        
+        if (pState == PlayerState.Prepare)
+        {
+            pState = PlayerState.Start;
+            print("Init");
+        }
+        if (pState == PlayerState.Start)
+        {
+            print("We started");
+        }
     }
 
     // Update is called once per frame
